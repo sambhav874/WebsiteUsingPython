@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        @media screen and (max-width:1000px) {
+
+            nav {
+                flex-direction: row;
+                display: flex;
+            }
+
+
+            nav ul {
+                justify-content: center;
+                flex-direction: row;
+                display: flex;
+            }
+
+            .search {
+                justify-content: center;
+            }
+
+            .search input {
+                margin: 12px 16px;
+            }
+
+            nav ul {
+                height: 34px;
+            }
+
+            .card-item img {
+                width: 140px;
+            }
+        }
+
+
+
+        select {
+            padding: 5px;
+            border-radius: 6PX;
+            font-size: large;
+            display: flex;
+            margin: auto;
+            text-align: center;
+            margin: 0px 0px 10px 10px;
+            padding: 5px 10px 10px 10px
+        }
+
+        legend {
+            color: black;
+            border-radius: 6PX;
+            margin: 0px 0px 15px 15px;
+            padding: 10px;
+        }
+
+        input {
+            color: black;
+            border-radius: 6PX;
+            margin: 0px 0px 10px 10px;
+            padding: 10px;
+        }
+
+        option {
+            color: black;
+            border-radius: 6PX;
+            margin: 0px 0px 10px 10px;
+            padding: 10px;
+        }
+
+        fieldset {
+            color: black;
+            border-radius: 6PX;
+            margin: 0px 0px 10px 10px;
+            padding: 10px;
+        }
+
+        h2 {
+            color: white;
+            font-size: xx-large;
+            border: 3PX solid black;
+            margin: 0px 0px 10px 10px;
+
+        }
+
+        p {
+            color: black;
+            padding: 5px;
+            border-radius: 6PX;
+            font-size: large;
+            display: flex;
+            margin: auto;
+            text-align: center;
+            margin: 0px 0px 10px 10px;
+            padding: 5px 10px 10px 10px
+        }
+
+        em {
+            color: gray;
+            padding: 10px;
+            font-size: large;
+            border-radius: 6PX;
+            margin: 0px 0px 10px 10px;
+        }
+
+        nav {
+            display: flex;
+            margin: auto;
+            text-align: center;
+            padding-bottom: 5px;
+        }
+
+        footer {
+            font-weight: bolder;
+            color: white;
+            background-color: aquamarine;
+            font-size: larger;
+            padding: 10px;
+        }
+
+        h1 {
+            font-size: 300%;
+            color: black;
+            padding: 10px;
+            text-align: center;
+            text-decoration: overline;
+        }
+
+        h3 {
+            font-size: 50%;
+            padding-bottom: 5px;
+            padding-top: 5px;
+
+        }
+
+        * {
+            word-spacing: 3px;
+            box-sizing: border-box;
+            padding: 3px 3px 3px 3px;
+            background-image: url(/templates/ivana-cajina-asuyh-_ZX54-unsplash.jpg);
+
+        }
+
+        a {
+            color: gray;
+            padding: 10px;
+        }
+
+        body {
+            margin: 15PX 30PX;
+            padding: 10px;
+            margin: 3px 3px 5px 5px;
+        }
+
+        .CONTAINER {
+            background-color: gray;
+            border: 2PX;
+            border-radius: 15PX;
+            margin: 15px 15px 15px 15px;
+            padding: 5px 20px 15px 10px;
+        }
+
+        .mb-3 {
+            padding-top: 10px;
+        }
+
+        textarea {
+            width: 100%;
+            padding: 12PX;
+            border: 1PX SOLID WHITE;
+            border-radius: 6PX;
+            padding: 10px;
+        }
+
+        .placeholder {
+            font-family: 'MONTESERRAT';
+            color: black;
+        }
+
+        input[TYPE="SUBMIT"] {
+            font-size: xX-large;
+            background-color: lightgreen;
+            font-family: 'OSWALD';
+            color: white;
+            padding:
+                12PX 20PX;
+            border: 10PX;
+            cursor: pointer;
+            width: 100%;
+            display: flex;
+            margin: auto;
+            text-align: center;
+        }
+
+        .searchbar input {
+            width: 500px;
+            height: 23px;
+            border-radius: 5px;
+            margin: 0px 16px 0px 56px;
+            font-family: 'Lato', sans-serif;
+            font-weight: 900;
+            padding: 0px 12px;
+        }
+    </style>
+
+
+    <link rel="STYLESHEET" href="templates/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <title>Sign up to WholeTail- Your favourite marketplace.</title>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N"
+        crossorigin="anonymous"></script>
+</head>
+
+<body class="CONTAINER">
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <img src="/templates/2.png">
+            <a class="navbar-brand" href="/templates/2.png">
+                <h1>WholeTail - Sign up</h1>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="top_wholesalers.html">Top Wholesalers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="signup_page.html">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="login_page.html">Login</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Dropdown
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Action</a></li>
+                            <li><a class="dropdown-item" href="#">Another action</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled">Disabled</a>
+                    </li>
+                </ul>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">
+            <h3>Email address</h3>
+        </label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+
+    <div class="row g-3 align-items-center">
+        <div class="col-auto">
+            <label for="inputPassword6" class="col-form-label">
+                <h3>Password</h3>
+            </label>
+        </div>
+        <div class="col-auto">
+            <input type="password" id="inputPassword6" class="form-control" aria-labelledby="passwordHelpInline">
+        </div>
+        <div class="col-auto">
+            <span id="passwordHelpInline" class="form-text">
+                Must be 8-20 characters long.
+            </span>
+        </div>
+    </div>
+
+    <P>
+    <h3>First Name: *</h3><input type="text" NAME="First Name" required placeholder="SAMBHAV"></P>
+    <P>
+    <h3>Second Name: *</h3><input type="text" NAME="Second Name" required placeholder="Jain"></P>
+    <P>
+    <FIEldset>
+        <legend>
+            <h3>GENDER *</h3>
+        </legend>
+        Male<input type="radio" NAME="GENDER" id="Male">
+        Female<input type="radio" NAME="GENDER" id="Female">
+        Unisex<input type="radio" NAME="GENDER" id="Unisex">
+    </FIEldset>
+
+    <div class="mb-3">
+        <label for="exampleFormControlTextarea1" class="form-label">
+            <h3>Address</h3>
+        </label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+    </div>
+    <P>
+    <h3>PINCODE *</h3><input type="number" NAME="PINCODE" ID="PINCODE" required placeholder="123456"></P>
+    <hr>
+    <hr>
+
+    <H2>Verification Details</H2>
+    <p>
+    <h3>Address Proof type:</h3>
+    <select name="CARD type" id="CARD TYPE">
+        <option value="">--SELECT A Valid Address proof--</option>
+        <option value="VISA">Aadhar</option>
+        <option value="MASTERCARD">Pan Card</option>
+        <option value="RUPAY">Voter Id</option>
+        <option value="UPI">Ration Card</option>
+        <option value="UPI">Driving License</option>
+        <option value="UPI">Passport</option>
+    </select>
+    <hr>
+    <hr>
+    <H2>PAYMENT INFORMATION</H2>
+    <p>
+    <h3>CARD TYPE:</h3>
+    <select name="CARD type" id="CARD TYPE">
+        <option value="">--SELECT A CARD TYPE--</option>
+        <option value="VISA">VISA</option>
+        <option value="MASTERCARD">MASTERCARD</option>
+        <option value="RUPAY">RUPAY</option>
+        <option value="UPI">UPI</option>
+    </select>
+    </p>
+
+    <P>
+    <h3>Card Number:</h3><input type="number" name="Card Number" id="Card Number" placeholder="1111/2222/3333/4444"></P>
+    <p>
+    <h3>Expiry</h3><input type="date" name="Expiry Date" id="ExpiryDATE"></p>
+    <P>
+    <h3>CVV</h3><input type="password" name="CVV" id="CVV"></P>
+    <input type="submit" value="SUBMIT">
+    </p>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+        integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.min.js"
+        integrity="sha384-heAjqF+bCxXpCWLa6Zhcp4fu20XoNIA98ecBC1YkdXhszjoejr5y9Q77hIrv8R9i"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

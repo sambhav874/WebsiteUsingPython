@@ -1,0 +1,23 @@
+h2{
+    color: brown;font-family: 'oswald';font-size: xX-large;text-decoration: underline;border:5PX SOLID black;
+}
+p{
+    color: white; padding: 5px;; font-family: 'MONTSERRAT';  
+}
+a{
+    color: white;font-family:'POPPINS';
+}
+footer{
+    font-weight: bolder; color: darkred; background-color: aquamarine;font-family:'POPPINS';font-size: larger;padding:3PX;
+}
+h1{
+    font-size: 400%; color: darkorange; background-color: black; padding: 10px; text-align: center; font-family:'POPPINS';font-weight: bolder; text-decoration: overline;text-shadow: 4px 4px 8px black;
+}
+nav{
+    font-weight: bolder; font-style: normal; padding: 5px;font-family:'MONTSERRAT';
+    text-align: center;font-size: xX-large; overflow: hidden;
+}
+*{
+    background-color: rgb(128, 7, 7); border: top 2px; border: left 2px; border: right 2px;border: bottom 2px;background-image: url('/aldebaran-s-qtRF_RxCAo0-unsplash.jpg');
+    
+}
