@@ -48,6 +48,7 @@
             border-radius: 15PX;
             margin: 15px 15px 15px 15px;
             word-spacing: 3px;
+            background-image: linear-gradient(yellow,pink );
 
         }
 
@@ -124,6 +125,9 @@
                             <a class="nav-link" href="top_wholesalers.html">Top Wholesalers</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="verify_now.html">Verify Now</a>
+                          </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="signup_page.html">Sign Up</a>
                         </li>
                         <li class="nav-item">
@@ -159,11 +163,12 @@
                 <h2>Log in to WholeTail as:</h2>
             </label>
             <hr>
+            <form method="POST",action="/process1">
             <div class="mb-3">
                 <label for="exampleFormControlInput1" class="form-label">
                     <h2>Email Address</h2>
                 </label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
             </div>
             <hr>
             <div class="mb-3">
@@ -174,7 +179,7 @@
                         </label>
                     </div>
                     <div class="col-auto">
-                        <input type="password" id="inputPassword6" class="form-control"
+                        <input type="password" name='password' id="inputPassword6" class="form-control"
                             aria-labelledby="passwordHelpInline">
                     </div>
                     <div class="col-auto">
@@ -185,8 +190,11 @@
                 </div>
             </div>
             
-            <button type="button" class="btn">
-            <a href="http://127.0.0.1:5000/"><h3>Login</h3></a></button>
+            <input type="submit" value="LOGIN">
+            
+
+            </form>
+        
 
             <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
                 integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"

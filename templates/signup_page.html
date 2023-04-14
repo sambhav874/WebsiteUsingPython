@@ -147,16 +147,17 @@
 
         a {
             color: gray;
-            padding: 10px;
+            padding: 8px;
         }
 
         body {
             margin: 15PX 30PX;
             padding: 10px;
-            margin: 3px 3px 5px 5px;
+            margin: 2px 2px 4px 4px;
         }
 
         .CONTAINER {
+            background-image: linear-gradient(yellow,pink );
             background-color: gray;
             border: 2PX;
             border-radius: 15PX;
@@ -165,15 +166,15 @@
         }
 
         .mb-3 {
-            padding-top: 10px;
+            padding-top: 8px;
         }
 
         textarea {
             width: 100%;
-            padding: 12PX;
+            padding: 8PX;
             border: 1PX SOLID WHITE;
             border-radius: 6PX;
-            padding: 10px;
+            padding: 8px;
         }
 
         .placeholder {
@@ -221,7 +222,7 @@
 
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
-            <img src="/templates/2.png">
+            
             <a class="navbar-brand" href="/templates/2.png">
                 <h1>WholeTail - Sign up</h1>
             </a>
@@ -238,6 +239,9 @@
                     <li class="nav-item">
                         <a class="nav-link" href="top_wholesalers.html">Top Wholesalers</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="verify_now.html">Verify Now</a>
+                      </li>
                     <li class="nav-item">
                         <a class="nav-link" href="signup_page.html">Sign Up</a>
                     </li>
@@ -258,9 +262,7 @@
                             <li><a class="dropdown-item" href="#">Something else here</a></li>
                         </ul>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link disabled">Disabled</a>
-                    </li>
+                    
                 </ul>
                 <form class="d-flex" role="search">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -269,12 +271,14 @@
             </div>
         </div>
     </nav>
-
+    {% with messages=get_flashed_messages(with_categories=true)%}
+    {% endwith %}
+    <form method="POST",action="/process">
     <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">
             <h3>Email address</h3>
         </label>
-        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        <input type="email" name="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
     </div>
 
     <div class="row g-3 align-items-center">
@@ -284,7 +288,7 @@
             </label>
         </div>
         <div class="col-auto">
-            <input type="password" id="inputPassword6" class="form-control" aria-labelledby="passwordHelpInline">
+            <input type="password" name="password" id="inputPassword6" class="form-control" aria-labelledby="passwordHelpInline">
         </div>
         <div class="col-auto">
             <span id="passwordHelpInline" class="form-text">
@@ -294,9 +298,9 @@
     </div>
 
     <P>
-    <h3>First Name: *</h3><input type="text" NAME="First Name" required placeholder="SAMBHAV"></P>
+    <h3>First Name: *</h3><input type="text" NAME="f_name" required placeholder="SAMBHAV"></P>
     <P>
-    <h3>Second Name: *</h3><input type="text" NAME="Second Name" required placeholder="Jain"></P>
+    <h3>Last Name: *</h3><input type="text" NAME="l_name" required placeholder="Jain"></P>
     <P>
     <FIEldset>
         <legend>
@@ -311,10 +315,10 @@
         <label for="exampleFormControlTextarea1" class="form-label">
             <h3>Address</h3>
         </label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        <textarea class="form-control" name="address" id="exampleFormControlTextarea1" rows="3"></textarea>
     </div>
     <P>
-    <h3>PINCODE *</h3><input type="number" NAME="PINCODE" ID="PINCODE" required placeholder="123456"></P>
+    <h3>PINCODE *</h3><input type="number" NAME="pincode" ID="PINCODE" required placeholder="123456"></P>
     <hr>
     <hr>
 
@@ -332,6 +336,7 @@
     </select>
     <hr>
     <hr>
+
     <H2>PAYMENT INFORMATION</H2>
     <p>
     <h3>CARD TYPE:</h3>
@@ -345,14 +350,15 @@
     </p>
 
     <P>
-    <h3>Card Number:</h3><input type="number" name="Card Number" id="Card Number" placeholder="1111/2222/3333/4444"></P>
+    <h3>Card Number:</h3><input type="number" name="cardNo" id="Card Number" placeholder="1111/2222/3333/4444"></P>
     <p>
-    <h3>Expiry</h3><input type="date" name="Expiry Date" id="ExpiryDATE"></p>
+    <h3>Expiry</h3><input type="date" name="expiry" id="ExpiryDATE"></p>
     <P>
     <h3>CVV</h3><input type="password" name="CVV" id="CVV"></P>
     <input type="submit" value="SUBMIT">
     </p>
-
+</P>
+</form>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
         integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3"
